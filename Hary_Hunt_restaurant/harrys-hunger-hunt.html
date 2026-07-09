@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Harry's Hunger Hunt — Luxury Multi-Cuisine Restaurant · Gurgaon</title>
+<meta name="description" content="Where Every Bite Becomes an Experience. Authentic Indian, Chinese, Tandoor & Continental in HUDA Market, Sector 32, Gurgaon." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { bg:'#0B0B0B', card:'#161616', gold:'#D4AF37', accent:'#F7C948' },
+      fontFamily: {
+        display: ['"Playfair Display"','serif'],
+        sans: ['Poppins','sans-serif'],
+        btn: ['Montserrat','sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html,body{background:#0B0B0B;color:#f5f5f5;font-family:Poppins,sans-serif;scroll-behavior:smooth}
+  .font-display{font-family:"Playfair Display",serif}
+  .text-gradient-gold{background:linear-gradient(135deg,#F7C948,#D4AF37 50%,#8a6d1c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn-gold{background:linear-gradient(135deg,#F7C948,#D4AF37);color:#0B0B0B;font-family:Montserrat,sans-serif;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:14px 26px;font-size:11px;border-radius:2px;transition:.3s}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px -5px rgba(212,175,55,.5)}
+  .btn-ghost{border:1px solid rgba(212,175,55,.5);color:#D4AF37;font-family:Montserrat,sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 26px;font-size:11px;border-radius:2px;transition:.3s}
+  .btn-ghost:hover{background:#D4AF37;color:#0B0B0B}
+  .glass{background:rgba(22,22,22,.6);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.06)}
+  .card-hover{transition:transform .5s,border-color .5s}
+  .card-hover:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.4)}
+  .image-zoom img{transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}
+  .image-zoom:hover img{transform:scale(1.08)}
+  .fade-up{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+  .fade-up.in{opacity:1;transform:none}
+  .scrollbar-hide::-webkit-scrollbar{display:none}
+  .scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}
+  .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+  .hero-slide.active{opacity:1}
+  .hero-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.75) 100%)}
+  .divider-gold{height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent)}
+  .marquee{display:flex;gap:3rem;animation:scroll 30s linear infinite}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+  .progress-bar{position:fixed;left:0;top:0;height:2px;background:#D4AF37;z-index:100;width:0}
+</style>
+</head>
+<body class="bg-bg">
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-40 glass">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <a href="#home" class="font-display text-lg sm:text-2xl">Harry's <span class="text-gradient-gold italic">Hunger Hunt</span></a>
+    <nav class="hidden lg:flex gap-8 text-[11px] tracking-[0.25em] uppercase text-white/70">
+      <a href="#home" class="hover:text-gold">Home</a>
+      <a href="#menu" class="hover:text-gold">Menu</a>
+      <a href="#chef" class="hover:text-gold">Chef Specials</a>
+      <a href="#gallery" class="hover:text-gold">Gallery</a>
+      <a href="#reservation" class="hover:text-gold">Reserve</a>
+      <a href="#contact" class="hover:text-gold">Contact</a>
+    </nav>
+    <a id="waTop" href="#" class="btn-gold hidden sm:inline-block">Order on WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-[100vh] flex items-center overflow-hidden">
+  <div id="heroSlides" class="absolute inset-0">
+    <div class="hero-slide active" style="background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920') center/cover"></div>
+    <div class="hero-slide" style="background:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1920') center/cover"></div>
+    <div class="hero-slide" style="background:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920') center/cover"></div>
+  </div>
+  <div class="relative max-w-[1400px] mx-auto px-5 sm:px-8 py-32 text-center w-full">
+    <div class="text-[11px] tracking-[0.5em] uppercase text-gold mb-6 fade-up">Michelin-Inspired · Gurgaon</div>
+    <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl leading-[1.05] fade-up">
+      Where Every Bite<br/><em class="italic text-gradient-gold">Becomes an Experience</em>
+    </h1>
+    <p class="mt-6 max-w-2xl mx-auto text-white/70 text-base sm:text-lg fade-up">
+      Authentic Indian, Chinese, Tandoor & Continental — crafted with premium ingredients in the heart of HUDA Market, Sector 32.
+    </p>
+    <div class="mt-10 flex flex-wrap justify-center gap-4 fade-up">
+      <a href="#menu" class="btn-gold">Explore Menu</a>
+      <a href="#reservation" class="btn-ghost">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-16 border-y border-white/5">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div><div class="font-display text-4xl text-gold">15+</div><div class="text-[11px] tracking-[0.3em] uppercase text-white/50 mt-2">Years of Flavour</div></div>
+    <div><div class="font-display text-4xl text-gold">200+</div><div class="text-[11px] tracking-[0.3em] uppercase text-white/50 mt-2">Signature Dishes</div></div>
+    <div><div class="font-display text-4xl text-gold">50k+</div><div class="text-[11px] tracking-[0.3em] uppercase text-white/50 mt-2">Happy Diners</div></div>
+    <div><div class="font-display text-4xl text-gold">4.9★</div><div class="text-[11px] tracking-[0.3em] uppercase text-white/50 mt-2">Guest Rating</div></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="py-24">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8">
+    <div class="text-center mb-14 fade-up">
+      <div class="text-[11px] tracking-[0.5em] uppercase text-gold">The Menu</div>
+      <h2 class="font-display text-4xl sm:text-6xl mt-4">A World on Your <em class="italic text-gradient-gold">Plate</em></h2>
+      <div class="divider-gold w-32 mx-auto mt-6"></div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between mb-8">
+      <input id="search" placeholder="Search dishes…" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm w-full sm:max-w-xs"/>
+      <label class="inline-flex items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-white/70">
+        <input type="checkbox" id="vegOnly" class="accent-green-500"/> Veg only
+      </label>
+    </div>
+
+    <div id="cats" class="flex gap-2 overflow-x-auto scrollbar-hide pb-2 mb-8"></div>
+    <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- CHEF SPECIALS strip -->
+<section id="chef" class="py-24 bg-card/40 border-y border-white/5">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <div class="text-[11px] tracking-[0.5em] uppercase text-gold">Chef Recommended</div>
+      <h2 class="font-display text-4xl sm:text-6xl mt-4">Signatures from the <em class="italic text-gradient-gold">Kitchen</em></h2>
+    </div>
+    <div id="chefGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-24">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <div class="text-[11px] tracking-[0.5em] uppercase text-gold">Gallery</div>
+      <h2 class="font-display text-4xl sm:text-6xl mt-4">Moments <em class="italic text-gradient-gold">Plated</em></h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800" class="aspect-square object-cover rounded-sm"/>
+      <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800" class="aspect-square object-cover rounded-sm"/>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation" class="py-24 bg-card/40 border-y border-white/5">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <div class="text-[11px] tracking-[0.5em] uppercase text-gold">Reservation</div>
+      <h2 class="font-display text-4xl sm:text-6xl mt-4">Reserve Your <em class="italic text-gradient-gold">Table</em></h2>
+    </div>
+    <form id="resForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <input required name="name" placeholder="Full Name" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm sm:col-span-2"/>
+      <input required name="phone" placeholder="Phone" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm"/>
+      <input required name="guests" type="number" min="1" placeholder="Guests" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm"/>
+      <input required name="date" type="date" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm"/>
+      <input required name="time" type="time" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm"/>
+      <textarea name="note" placeholder="Occasion / notes" class="bg-card border border-white/10 focus:border-gold/60 outline-none px-4 py-3 text-sm rounded-sm sm:col-span-2 h-24"></textarea>
+      <button class="btn-gold sm:col-span-2">Confirm on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-10">
+    <div>
+      <div class="text-[11px] tracking-[0.5em] uppercase text-gold">Visit Us</div>
+      <h2 class="font-display text-4xl sm:text-5xl mt-4">HUDA Market, <em class="italic text-gradient-gold">Sector 32</em>, Gurgaon</h2>
+      <div class="mt-8 space-y-4 text-white/70 text-sm">
+        <div><span class="text-gold uppercase tracking-[0.25em] text-[10px] block mb-1">Phone</span>+91 92201 36502 · +91 92201 46503</div>
+        <div><span class="text-gold uppercase tracking-[0.25em] text-[10px] block mb-1">Email</span>hello@harryshungerhunt.in</div>
+        <div><span class="text-gold uppercase tracking-[0.25em] text-[10px] block mb-1">Hours</span>11:00 AM – 12:00 AM · All Days</div>
+        <div><span class="text-gold uppercase tracking-[0.25em] text-[10px] block mb-1">Instagram</span>@harryshungerhunt</div>
+      </div>
+    </div>
+    <iframe class="w-full h-[420px] rounded-sm border border-white/10" src="https://www.google.com/maps?q=HUDA+Market+Sector+32+Gurgaon&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-10 text-center text-xs text-white/40">
+  © <span id="yr"></span> Harry's Hunger Hunt · Crafted with <span class="text-gold">♥</span> in Gurgaon
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="fixed right-4 bottom-4 z-50 flex flex-col gap-3 items-end">
+  <a href="tel:+919220136502" class="h-12 w-12 rounded-full bg-bg border border-gold text-gold grid place-items-center shadow-lg">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.5 15.5 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.24 1.02z"/></svg>
+  </a>
+  <a id="waFloat" href="#" class="h-14 w-14 rounded-full bg-[#25D366] text-white grid place-items-center shadow-lg">
+    <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+  </a>
+</div>
+
+<!-- FLOATING CART -->
+<div id="cartBar" class="hidden fixed left-1/2 -translate-x-1/2 bottom-24 sm:bottom-6 z-40">
+  <div class="glass rounded-full pl-5 pr-2 py-2 flex items-center gap-4 border border-gold/40">
+    <div class="text-sm"><span id="cartCount" class="text-gold font-semibold">0</span> items · ₹<span id="cartTotal">0</span></div>
+    <button id="sendOrder" class="btn-gold !py-2 !px-4 rounded-full">Send WhatsApp</button>
+  </div>
+</div>
+
+<script>
+const PHONE = '919220136502';
+const WA = (t='Hello Harry\'s Hunger Hunt, I would like to place an order.') =>
+  `https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+document.getElementById('waTop').href = WA();
+document.getElementById('waFloat').href = WA();
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ---- MENU DATA ----
+const CATEGORIES = ['Chef Specials','Chinese','Rolls','Momos','Indian Veg','Indian Non-Veg','Tandoor','Burgers','Sandwiches','Pasta','Maggi','Fries','Combos','Thalis','Beverages'];
+const IMG = {
+  chinese:'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800',
+  rolls:'https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800',
+  momos:'https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?w=800',
+  paneer:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800',
+  chicken:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800',
+  tandoor:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800',
+  burger:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800',
+  sandwich:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800',
+  pasta:'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800',
+  maggi:'https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=800',
+  fries:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800',
+  combo:'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800',
+  thali:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=800',
+  drink:'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800',
+};
+const MENU = [
+  // Chinese
+  {id:'c1',name:'Veg Hakka Noodles',price:180,category:'Chinese',veg:true,spice:2,popular:true,desc:'Wok-tossed with garden vegetables and soy.',img:IMG.chinese},
+  {id:'c2',name:'Chicken Manchurian',price:260,category:'Chinese',veg:false,spice:2,chef:true,desc:'Crispy chicken in tangy indo-chinese gravy.',img:IMG.chinese},
+  {id:'c3',name:'Schezwan Fried Rice',price:200,category:'Chinese',veg:true,spice:3,desc:'Fiery Schezwan chilli, burnt garlic, crunchy veg.',img:IMG.chinese},
+  {id:'c4',name:'Chilli Paneer',price:240,category:'Chinese',veg:true,spice:2,popular:true,desc:'Cottage cheese tossed with bell pepper & chilli.',img:IMG.chinese},
+  // Rolls
+  {id:'r1',name:'Paneer Tikka Roll',price:150,category:'Rolls',veg:true,spice:1,popular:true,desc:'Smoky paneer, mint chutney, soft flaky paratha.',img:IMG.rolls},
+  {id:'r2',name:'Chicken Seekh Roll',price:180,category:'Rolls',veg:false,spice:2,desc:'Char-grilled seekh with pickled onions.',img:IMG.rolls},
+  {id:'r3',name:'Egg Roll Classic',price:120,category:'Rolls',veg:false,spice:1,desc:'Kolkata-style egg roll, sweet & tangy.',img:IMG.rolls},
+  // Momos
+  {id:'m1',name:'Steamed Veg Momos',price:120,category:'Momos',veg:true,spice:0,desc:'Delicate parcels served with fiery chutney.',img:IMG.momos},
+  {id:'m2',name:'Tandoori Chicken Momos',price:180,category:'Momos',veg:false,spice:2,chef:true,desc:'Char-kissed momos with malai marinade.',img:IMG.momos},
+  {id:'m3',name:'Kurkure Paneer Momos',price:160,category:'Momos',veg:true,spice:1,popular:true,desc:'Crispy vermicelli coating, creamy paneer.',img:IMG.momos},
+  // Indian Veg
+  {id:'iv1',name:'Paneer Butter Masala',price:280,category:'Indian Veg',veg:true,spice:1,chef:true,desc:'Rich tomato-cashew gravy, smoked butter.',img:IMG.paneer},
+  {id:'iv2',name:'Dal Makhani',price:220,category:'Indian Veg',veg:true,spice:1,popular:true,desc:'Slow-cooked overnight with cream.',img:IMG.paneer},
+  {id:'iv3',name:'Shahi Paneer',price:280,category:'Indian Veg',veg:true,spice:1,desc:'Royal Mughlai gravy, saffron, cardamom.',img:IMG.paneer},
+  // Indian Non-Veg
+  {id:'in1',name:'Butter Chicken',price:340,category:'Indian Non-Veg',veg:false,spice:1,chef:true,popular:true,desc:'The classic — tender, buttery, iconic.',img:IMG.chicken},
+  {id:'in2',name:'Chicken Biryani',price:320,category:'Indian Non-Veg',veg:false,spice:2,popular:true,desc:'Long-grain basmati, layered with love.',img:IMG.chicken},
+  {id:'in3',name:'Mutton Rogan Josh',price:420,category:'Indian Non-Veg',veg:false,spice:2,desc:'Kashmiri spice, slow-braised mutton.',img:IMG.chicken},
+  // Tandoor
+  {id:'t1',name:'Tandoori Chicken (Full)',price:520,category:'Tandoor',veg:false,spice:2,chef:true,desc:'Marinated 24hrs, clay-oven charred.',img:IMG.tandoor},
+  {id:'t2',name:'Paneer Tikka',price:280,category:'Tandoor',veg:true,spice:1,popular:true,desc:'Smoky cubes with charred peppers.',img:IMG.tandoor},
+  {id:'t3',name:'Malai Chicken Tikka',price:340,category:'Tandoor',veg:false,spice:0,desc:'Creamy, mild, melt-in-mouth.',img:IMG.tandoor},
+  // Burgers
+  {id:'b1',name:'Classic Veg Burger',price:140,category:'Burgers',veg:true,spice:1,desc:'Crispy patty, cheese, house sauce.',img:IMG.burger},
+  {id:'b2',name:'Peri Peri Chicken Burger',price:220,category:'Burgers',veg:false,spice:2,popular:true,desc:'Grilled chicken, peri mayo, slaw.',img:IMG.burger},
+  // Sandwiches
+  {id:'s1',name:'Bombay Grilled Sandwich',price:130,category:'Sandwiches',veg:true,spice:1,desc:'Chutney, potato, buttery grill.',img:IMG.sandwich},
+  {id:'s2',name:'Chicken Club Sandwich',price:220,category:'Sandwiches',veg:false,spice:1,desc:'Triple-decker, bacon, egg, chicken.',img:IMG.sandwich},
+  // Pasta
+  {id:'p1',name:'Alfredo Penne',price:260,category:'Pasta',veg:true,spice:0,chef:true,desc:'Creamy parmesan white sauce.',img:IMG.pasta},
+  {id:'p2',name:'Arrabbiata',price:240,category:'Pasta',veg:true,spice:2,desc:'Fiery tomato, garlic, chilli.',img:IMG.pasta},
+  // Maggi
+  {id:'mg1',name:'Cheese Maggi',price:110,category:'Maggi',veg:true,spice:1,popular:true,desc:'Loaded with molten cheese.',img:IMG.maggi},
+  {id:'mg2',name:'Tandoori Maggi',price:130,category:'Maggi',veg:true,spice:2,desc:'Smoky tandoori masala twist.',img:IMG.maggi},
+  // Fries
+  {id:'f1',name:'Peri Peri Fries',price:120,category:'Fries',veg:true,spice:2,desc:'Crisp fries, peri seasoning.',img:IMG.fries},
+  {id:'f2',name:'Cheese Loaded Fries',price:180,category:'Fries',veg:true,spice:0,popular:true,desc:'Molten cheese, jalapeños.',img:IMG.fries},
+  // Combos
+  {id:'cb1',name:'Butter Chicken + Naan Combo',price:380,category:'Combos',veg:false,spice:1,desc:'Half butter chicken, 2 butter naan, rice.',img:IMG.combo},
+  {id:'cb2',name:'Paneer Thali Combo',price:280,category:'Combos',veg:true,spice:1,desc:'Paneer, dal, rice, roti, salad, sweet.',img:IMG.combo},
+  // Thalis
+  {id:'th1',name:'Royal Veg Thali',price:320,category:'Thalis',veg:true,spice:1,chef:true,desc:'7-course celebration platter.',img:IMG.thali},
+  {id:'th2',name:'Non-Veg Feast Thali',price:420,category:'Thalis',veg:false,spice:2,desc:'Butter chicken, biryani, kebab & more.',img:IMG.thali},
+  // Beverages
+  {id:'d1',name:'Masala Chai',price:60,category:'Beverages',veg:true,spice:0,desc:'Cutting chai, cardamom, ginger.',img:IMG.drink},
+  {id:'d2',name:'Fresh Lime Soda',price:80,category:'Beverages',veg:true,spice:0,desc:'Sweet, salted or mixed.',img:IMG.drink},
+  {id:'d3',name:'Mango Lassi',price:120,category:'Beverages',veg:true,spice:0,popular:true,desc:'Thick, creamy, alphonso.',img:IMG.drink},
+];
+
+// ---- STATE ----
+let state = { cat:'Chef Specials', q:'', veg:false, cart:{} };
+
+const catsEl = document.getElementById('cats');
+CATEGORIES.forEach(c=>{
+  const b=document.createElement('button');
+  b.textContent=c;
+  b.className='shrink-0 px-4 py-2 text-[11px] tracking-[0.2em] uppercase border rounded-sm transition border-white/10 text-white/70 hover:border-white/30';
+  b.onclick=()=>{state.cat=c;render();[...catsEl.children].forEach(x=>x.className=b.className);b.className='shrink-0 px-4 py-2 text-[11px] tracking-[0.2em] uppercase border rounded-sm border-gold text-gold bg-gold/5';};
+  catsEl.appendChild(b);
+});
+catsEl.children[0].click();
+
+document.getElementById('search').oninput=e=>{state.q=e.target.value;render();};
+document.getElementById('vegOnly').onchange=e=>{state.veg=e.target.checked;render();};
+
+function card(d){
+  return `<div class="bg-card border border-white/5 rounded-sm overflow-hidden card-hover image-zoom">
+    <div class="aspect-[4/3] overflow-hidden relative">
+      <img src="${d.img}" alt="${d.name}" loading="lazy" class="w-full h-full object-cover"/>
+      <div class="absolute top-3 left-3 flex gap-1.5">
+        <span class="h-5 w-5 grid place-items-center rounded-sm bg-black/50 border ${d.veg?'border-green-500 text-green-500':'border-red-500 text-red-500'} text-[10px]">${d.veg?'●':'▲'}</span>
+      </div>
+      <div class="absolute top-3 right-3 flex flex-col gap-1.5 items-end">
+        ${d.chef?'<span class="text-[9px] tracking-[0.18em] uppercase bg-gold text-bg px-2 py-1 rounded-sm">Chef</span>':''}
+        ${d.popular?'<span class="text-[9px] tracking-[0.18em] uppercase bg-black/70 text-gold border border-gold/40 px-2 py-1 rounded-sm">Best Seller</span>':''}
+      </div>
+    </div>
+    <div class="p-5">
+      <div class="flex items-start justify-between gap-3">
+        <div class="min-w-0">
+          <div class="font-display text-lg leading-tight truncate">${d.name}</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-white/40 mt-1">${d.category}</div>
+        </div>
+        <div class="text-gold font-display text-xl shrink-0">₹${d.price}</div>
+      </div>
+      <p class="text-sm text-white/60 mt-3">${d.desc}</p>
+      <div class="mt-4 flex items-center justify-between">
+        <span class="text-red-400 text-xs">${'🌶'.repeat(d.spice||0)}</span>
+        <button onclick="addCart('${d.id}')" class="text-[11px] tracking-[0.2em] uppercase text-gold border border-gold/40 px-3 py-2 rounded-sm hover:bg-gold hover:text-bg transition">+ Add</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function render(){
+  const list = MENU.filter(m=>{
+    if(state.cat==='Chef Specials' && !m.chef) return false;
+    if(state.cat!=='Chef Specials' && m.category!==state.cat) return false;
+    if(state.veg && !m.veg) return false;
+    if(state.q && !m.name.toLowerCase().includes(state.q.toLowerCase())) return false;
+    return true;
+  });
+  document.getElementById('grid').innerHTML = list.length ? list.map(card).join('') : '<div class="col-span-full text-center text-white/40 py-16">No dishes match your filters.</div>';
+}
+document.getElementById('chefGrid').innerHTML = MENU.filter(m=>m.chef).slice(0,4).map(card).join('');
+
+// ---- CART ----
+function addCart(id){
+  state.cart[id]=(state.cart[id]||0)+1;
+  updateCart();
+}
+function updateCart(){
+  const entries = Object.entries(state.cart);
+  const count = entries.reduce((a,[,q])=>a+q,0);
+  const total = entries.reduce((s,[id,q])=>{const d=MENU.find(m=>m.id===id);return s+(d?d.price*q:0);},0);
+  document.getElementById('cartCount').textContent=count;
+  document.getElementById('cartTotal').textContent=total;
+  document.getElementById('cartBar').classList.toggle('hidden', count===0);
+}
+document.getElementById('sendOrder').onclick=()=>{
+  const lines = Object.entries(state.cart).map(([id,q])=>{const d=MENU.find(m=>m.id===id);return `• ${d.name} × ${q} = ₹${d.price*q}`;});
+  const total = document.getElementById('cartTotal').textContent;
+  window.open(WA(`Hello Harry's Hunger Hunt, I would like to place an order:\n\n${lines.join('\n')}\n\nTotal: ₹${total}\n\nName:\nAddress:`),'_blank');
+};
+
+// ---- RESERVATION ----
+document.getElementById('resForm').onsubmit=e=>{
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const msg = `Hello Harry's Hunger Hunt, I'd like to reserve a table:\n\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nGuests: ${f.get('guests')}\nDate: ${f.get('date')}\nTime: ${f.get('time')}\nNotes: ${f.get('note')||'-'}`;
+  window.open(WA(msg),'_blank');
+};
+
+// ---- HERO SLIDER ----
+const slides = document.querySelectorAll('.hero-slide');
+let si=0;
+setInterval(()=>{slides[si].classList.remove('active');si=(si+1)%slides.length;slides[si].classList.add('active');},5000);
+
+// ---- SCROLL FX ----
+const io = new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  document.getElementById('progress').style.width=p+'%';
+});
+</script>
+</body>
+</html>
